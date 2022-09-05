@@ -1,0 +1,35 @@
+ブロック一覧=[
+  ["ASCII", "ascii", 0x20, 0x7f],
+  ["矢印", "arrows", 0x2190, 0x21ff],
+  ["補助矢印A", "arrows-a", 0x27F0, 0x27FF],
+  ["補助矢印B", "arrows-b", 0x2900, 0x297F],
+  ["数学用英数字記号", "mathmatical-alphabet-symbols", 0x1D400, 0x1d7ff],
+  ["文字様記号", "letterlike-symbols", 0x2100, 0x214F],
+  ["数学記号", "mathematical", 0x2200, 0x22ff],
+  ["補助数学記号", "mathematical-sup", 0x2200, 0x22ff],
+  ["その他の数学記号A", "mathematical-misc-a", 0x27C0, 0x27EF],
+  ["その他の数学記号B", "mathematical-misc-b", 0x2980, 0x29FF],
+  ["幾何学模様", "geometric-shapes", 0x25a0, 0x25ff],
+  ["罫線素片", "box-drawing", 0x2500, 0x257F],
+  ["ブロック要素", "block-elements", 0x2580, 0x259f],
+  ["幾何学模様拡張", "geometric-shapes-ex", 0x1F780, 0x1F7FF],
+]
+保存先=「{母艦パス}/..」を絶対パス変換。
+ブロック一覧を反復：
+　　対象をMD生成処理。
+
+●(Pを)MD生成処理とは：
+　　変数[F名前, FNAME, ST, ED] = P
+　　MD=「# {F名前}」&改行&改行
+　　MD=MD&「|CODE|+0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+A|+B|+C|+D|+E|+F|」&改行
+　　MD=MD&「|----|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|」&改行
+　　CをSTからEDまで繰り返す：
+　　　　もし、(C % 16 = 0)ならば：
+　　　　　　CODE=大文字変換(HEX(C))
+　　　　　　MD=MD&「|{CODE}|」
+　　　　MD=MD&「 {CHR(C)} |」
+　　　　もし、(C % 16 = 15)ならば：
+　　　　　　MD=MD＆改行
+　　MDを表示。
+　　「{保存先}/{FNAME}.md」へMDを保存。
+
