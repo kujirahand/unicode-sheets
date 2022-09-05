@@ -24,11 +24,13 @@
   ["その他の数学記号A", "mathematical-misc-a", 0x27C0, 0x27EF],
   ["その他の数学記号B", "mathematical-misc-b", 0x2980, 0x29FF],#--------
   ["ASCII", "ascii", 0x20, 0x7f], # なでしこに関係する領域
-  ["囲み英数字", "enclosed-alphanumerics", 0x2460, 0x24ff],
+  ["囲み英数字", "enclosed-alphanumeric", 0x2460, 0x24ff],
+  ["囲み英数字補助", "enclosed-alphanumeric-sup", 0x1F100, 0x1F1FF],
+  ["囲みCJK文字", "enclosed-cjk", 0x3200, 0x32FF],
   ["罫線素片", "box-drawing", 0x2500, 0x257F], # インデント
   ["その他の技術用記号", "misc-technical", 0x2300, 0x23ff], # インデント
   ["CJK統合漢字", "cjk-uni", 0x4e00,0x9fff],
-  ["CJK統合漢字拡張A", "cjk-uni-ex-a", 0x3400, 0x4DB5],
+  ["CJK統合漢字拡張A", "cjk-uni-ex-a", 0x3400, 0x4DBF],
   ["CJK統合漢字拡張B", "cjk-uni-ex-b", 0x20000, 0x2A6DF],
   ["CJK統合漢字拡張C", "cjk-uni-ex-c", 0x2A700, 0x2B73F],
   ["CJK統合漢字拡張D", "cjk-uni-ex-d", 0x2B740, 0x2B81F],
@@ -61,7 +63,9 @@ INDEXを「{保存先}/README.md」へ保存。
 
 ●(Pを)MD生成処理とは：
 　　変数[F名前, FNAME, ST, ED] = P
-　　INDEX=INDEX&「| [{F名前}](./{FNAME}) | {HEX(ST)} | {HEX(ED)} |」&改行
+　　もし、ED%16 <> 15ならば：
+　　　　「*** [ERR] {HEX(ED)}: --- {F名前} --- 16で割って15になるように」を表示。終わる。
+　　INDEX=INDEX&「| [{F名前}](./{FNAME}.md) | {大文字変換(HEX(ST))} | {大文字変換(HEX(ED))} |」&改行
 　　MD=「# {F名前}」&改行&改行
 　　MD=MD&「|CODE|+0|+1|+2|+3|+4|+5|+6|+7|+8|+9|+A|+B|+C|+D|+E|+F|」&改行
 　　MD=MD&「|----|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|」&改行
