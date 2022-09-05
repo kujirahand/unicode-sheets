@@ -1,6 +1,33 @@
 ###
 # https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF_(Unicode)
 ブロック一覧=[
+  ["ASCII", "ascii", 0x20, 0x7f], # なでしこに関係する領域
+  ["罫線素片", "box-drawing", 0x2500, 0x257F], # インデント
+  ["その他の技術用記号", "misc-technical", 0x2300, 0x23ff], # インデント
+  ["囲み英数字", "enclosed-alphanumeric", 0x2460, 0x24ff],
+  ["囲み英数字補助", "enclosed-alphanumeric-sup", 0x1F100, 0x1F1FF],
+  ["囲みCJK文字", "enclosed-cjk", 0x3200, 0x32FF],
+  ["囲み表意文字補助", "enclosed-id-sup", 0x1F200, 0x1F2FF],
+  ["CJK互換用文字", "enclosed-cjk-com", 0x3300, 0x33ff],
+  ["CJK統合漢字", "cjk-uni", 0x4e00,0x9fff],
+  ["CJK統合漢字拡張A", "cjk-uni-ex-a", 0x3400, 0x4DBF],
+  ["CJK統合漢字拡張B", "cjk-uni-ex-b", 0x20000, 0x2A6DF],
+  ["CJK統合漢字拡張C", "cjk-uni-ex-c", 0x2A700, 0x2B73F],
+  ["CJK統合漢字拡張D", "cjk-uni-ex-d", 0x2B740, 0x2B81F],
+  ["CJK統合漢字拡張E", "cjk-uni-ex-e", 0x2B820, 0x2CEAF],
+  ["CJK統合漢字拡張F", "cjk-uni-ex-f", 0x2CEB0, 0x2EBEF],
+  ["CJK統合漢字拡張G", "cjk-uni-ex-g", 0x30000, 0x3134F],
+  ["CJK互換漢字", "cjk-com", 0xf900, 0xfaff],
+  ["CJK互換漢字補助", "cjk-cm-sup", 0x2f800, 0x2fa1f],
+  ["異体字セレクタ", "variation-selectors-sup", 0xe0100, 0xe01ef],
+  ["ひらがな", "hiragana", 0x3040, 0x309f],
+  ["カタカナ", "katakana", 0x30a0, 0x30ff],
+  ["カタカナ拡張", "katakana-ex", 0x31f0, 0x31ff],
+  ["カナ補助", "kana-sup", 0x1b000, 0x1b0ff],
+  ["カナ拡張A", "kana-ex-a", 0x1b100, 0x1b12f],
+  ["カナ拡張B", "kana-ex-b", 0x1AFF0, 0x1AFFF],
+  ["半角・全角形", "half-full-forms", 0xff00, 0xffef],
+  ["漢文用記号", "kanbun", 0x3190, 0x319f]
   ["IPA拡張", "ipa-ex", 0x250, 0x2af],
   ["ギリシャ文字及びコプト文字", "greek-coptic", 0x370, 0x3ff],
   ["キリル文字", "cyrillic", 0x400, 0x4ff],
@@ -23,33 +50,6 @@
   ["幾何学模様拡張", "geometric-shapes-ex", 0x1F780, 0x1F7FF],
   ["その他の数学記号A", "mathematical-misc-a", 0x27C0, 0x27EF],
   ["その他の数学記号B", "mathematical-misc-b", 0x2980, 0x29FF],#--------
-  ["ASCII", "ascii", 0x20, 0x7f], # なでしこに関係する領域
-  ["囲み英数字", "enclosed-alphanumeric", 0x2460, 0x24ff],
-  ["囲み英数字補助", "enclosed-alphanumeric-sup", 0x1F100, 0x1F1FF],
-  ["囲みCJK文字", "enclosed-cjk", 0x3200, 0x32FF],
-  ["囲み表意文字補助", "enclosed-id-sup", 0x1F200, 0x1F2FF],
-  ["CJK互換用文字", "enclosed-cjk-com", 0x3300, 0x33ff],
-  ["罫線素片", "box-drawing", 0x2500, 0x257F], # インデント
-  ["その他の技術用記号", "misc-technical", 0x2300, 0x23ff], # インデント
-  ["CJK統合漢字", "cjk-uni", 0x4e00,0x9fff],
-  ["CJK統合漢字拡張A", "cjk-uni-ex-a", 0x3400, 0x4DBF],
-  ["CJK統合漢字拡張B", "cjk-uni-ex-b", 0x20000, 0x2A6DF],
-  ["CJK統合漢字拡張C", "cjk-uni-ex-c", 0x2A700, 0x2B73F],
-  ["CJK統合漢字拡張D", "cjk-uni-ex-d", 0x2B740, 0x2B81F],
-  ["CJK統合漢字拡張E", "cjk-uni-ex-e", 0x2B820, 0x2CEAF],
-  ["CJK統合漢字拡張F", "cjk-uni-ex-f", 0x2CEB0, 0x2EBEF],
-  ["CJK統合漢字拡張G", "cjk-uni-ex-g", 0x30000, 0x3134F],
-  ["CJK互換漢字", "cjk-com", 0xf900, 0xfaff],
-  ["CJK互換漢字補助", "cjk-cm-sup", 0x2f800, 0x2fa1f],
-  ["異体字セレクタ", "variation-selectors-sup", 0xe0100, 0xe01ef],
-  ["ひらがな", "hiragana", 0x3040, 0x309f],
-  ["カタカナ", "katakana", 0x30a0, 0x30ff],
-  ["カタカナ拡張", "katakana-ex", 0x31f0, 0x31ff],
-  ["カナ補助", "kana-sup", 0x1b000, 0x1b0ff],
-  ["カナ拡張A", "kana-ex-a", 0x1b100, 0x1b12f],
-  ["カナ拡張B", "kana-ex-b", 0x1AFF0, 0x1AFFF],
-  ["半角・全角形", "half-full-forms", 0xff00, 0xffef],
-  ["漢文用記号", "kanbun", 0x3190, 0x319f]
 ]
 
 保存先=「{母艦パス}/..」を絶対パス変換。
