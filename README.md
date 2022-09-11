@@ -11,6 +11,7 @@
 | [囲み英数字補助](./enclosed-alphanumeric-sup.md) | U+1F100 | U+1F1FF |
 | [囲みCJK文字](./enclosed-cjk.md) | U+3200 | U+32FF |
 | [囲み表意文字補助](./enclosed-id-sup.md) | U+1F200 | U+1F2FF |
+| [CJKの記号と句読点](./cjk-symbols.md) | U+3000 | U+303F |
 | [CJK互換用文字](./enclosed-cjk-com.md) | U+3300 | U+33FF |
 | [CJK統合漢字](./cjk-uni.md) | U+4E00 | U+9FFF |
 | [CJK統合漢字拡張A](./cjk-uni-ex-a.md) | U+3400 | U+4DBF |
