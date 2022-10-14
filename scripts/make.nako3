@@ -78,7 +78,10 @@ INDEXを「{保存先}/README.md」へ保存。
 　　　　もし、(C % 16 = 0)ならば：
 　　　　　　CODE=大文字変換(HEX(C))
 　　　　　　MD=MD&「|{CODE}|」
-　　　　MD=MD&「 {CHR(C)} |」
+　　　　CH=CHR(C)
+　　　　もし、CH="|"ならば、CH="｜"
+　　　　もし、C=0x7Fならば、CH="DEL"
+　　　　MD=MD&「 {CH} |」
 　　　　もし、(C % 16 = 15)ならば：
 　　　　　　MD=MD＆改行
 　　MDを表示。
